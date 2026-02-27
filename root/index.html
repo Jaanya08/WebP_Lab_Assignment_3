@@ -44,114 +44,161 @@
             font-family: 'Cursive', 'Brush Script MT', cursive;
             font-size: 80px;
             font-weight: 700;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 4px 4px 15px rgba(0,0,0,0.8);
             text-transform: capitalize;
             letter-spacing: 5px;
             margin-bottom: 20px;
         }
 
         .hotel-name::first-letter {
-            font-size: 120px;
-            color: #ffd700;
+            font-size: 130px;
+            color: #FFD700; /* Vibrant Gold */
+            -webkit-text-stroke: 1px black;
         }
 
         .nav-btn {
-            padding: 15px 30px;
-            background-color: #ffd700;
-            border: 2px solid #fff;
+            padding: 18px 35px;
+            background-color: #FFD700;
+            border: 3px solid #003366;
             cursor: pointer;
-            font-weight: bold;
+            font-weight: 900;
             text-decoration: none;
-            color: black;
+            color: #003366;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #003366;
+            color: #FFD700;
+            transform: scale(1.1);
         }
 
         #room-page {
             display: none;
             padding: 80px 40px;
-            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            background: linear-gradient(135deg, #003366 0%, #00509d 100%); /* Deep Royal Blue */
             min-height: 100vh;
         }
 
         #room-page h2 {
             font-family: 'Georgia', serif;
-            font-size: 42px;
-            color: #2c3e50;
+            font-size: 48px;
+            color: #FFD700;
             text-align: center;
             margin-bottom: 50px;
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
+        /* POINT: ::after */
         #room-page h2::after {
             content: "";
             display: block;
-            width: 80px;
-            height: 4px;
-            background: #ffd700;
-            margin: 10px auto;
+            width: 150px;
+            height: 6px;
+            background: #FFD700;
+            margin: 15px auto;
+            border-radius: 10px;
         }
 
         .room-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            max-width: 1100px;
+            gap: 40px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         .room-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            border-left: 8px solid #ffd700;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: #FFFFFF;
+            padding: 40px;
+            border-radius: 25px;
+            border-top: 12px solid #FFD700; 
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
             text-align: left;
         }
 
         .room-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            background: #fffdf5;
+            transform: translateY(-15px);
+            background: #fdfae6; 
         }
 
         .room-card h3 {
             margin-top: 0;
-            color: #34495e;
-            font-size: 24px;
+            color: #003366; 
+            font-size: 28px;
+            text-decoration: underline decoration-color #FFD700;
+        }
+
+        .room-card p {
+            color: #d90429; 
+            font-size: 22px;
+            font-weight: 800;
         }
 
         .room-card button {
             margin-top: 15px;
-            padding: 12px 25px;
-            background-color: #2c3e50;
+            padding: 12px 30px;
+            background-color: #003366;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
+            font-weight: 700;
+            font-size: 1rem;
         }
 
         .room-card button:hover {
-            background-color: #ffd700;
-            color: #2c3e50;
+            background-color: #FFD700;
+            color: #003366;
+        }
+
+        .form-section {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 40px;
+            background: #FFD700; 
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .promo-text::first-line {
+            font-weight: bold;
+            color: #003366;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        .form-section input {
+            padding: 15px;
+            width: 80%;
+            margin-bottom: 20px;
+            border: 2px solid #003366;
+            border-radius: 8px;
+            font-size: 1rem;
         }
 
         #confirmation-note {
             display: none;
             max-width: 600px;
             margin: 30px auto;
-            background-color: #e8f5e9;
-            color: #2e7d32;
-            padding: 20px;
-            border-radius: 8px;
-            border: 2px solid #a5d6a7;
+            background-color: #2ecc71; 
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            font-size: 1.2rem;
             text-align: center;
-            font-weight: bold;
+            border: 3px solid #27ae60;
         }
     </style>
 </head>
+
 <body onscroll="updateBackground()">
 
     <div id="bg-container" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');"></div>
@@ -159,18 +206,49 @@
     <div id="landing-page" class="landing-section">
         <div class="middle-content">
             <h1 class="hotel-name">Luxe Haven Resort</h1>
-            <button class="nav-btn" onclick="showRooms()">View Stay Options</button>
+            <button class="nav-btn" onclick="showRooms()">BOOK YOUR STAY</button>
         </div>
     </div>
 
+    <div id="calendar-section" style="display: none; max-width: 600px; margin: 30px auto; padding: 20px; background: #003366; color: #FFD700; border-radius: 15px; border: 3px solid #FFD700; text-align: center;">
+    <h3>Select Your Stay Dates</h3>
+    <form id="booking-form">
+        <div style="display: flex; justify-content: space-around; margin-bottom: 20px;">
+            <div>
+                <label>Check-in:</label><br>
+                <input type="date" id="check-in" style="padding: 10px; border-radius: 5px;">
+            </div>
+            <div>
+                <label>Check-out:</label><br>
+                <input type="date" id="check-out" style="padding: 10px; border-radius: 5px;">
+            </div>
+        </div>
+        <button type="button" class="nav-btn" onclick="confirmFinalBooking()">Confirm Dates</button>
+    </form>
+</div>
+
     <div id="room-page">
-        <h2 style="text-align: center;">Choose Your Sanctuary</h2>
+        <h2>Choose Your Sanctuary</h2>
+        
         <div id="room-grid" class="room-grid"></div>
         
         <div id="confirmation-note">
-            <strong>Success!</strong> Your booking has been confirmed. See you soon!
+            🎉 <strong>Success!</strong> Your paradise is waiting. See you soon!
         </div>
-        <button class="nav-btn" onclick="goBack()" style="margin-top: 20px;">Back to Home</button>
+
+        <div class="form-section">
+            <p class="promo-text">Get 20% off your next visit!<br>Subscribe to our luxury VIP list today.</p>
+            <form id="newsletter-form" onsubmit="return validateForm()">
+                <input type="email" id="guest-email" placeholder="Type your email here..." onchange="console.log('Validating...')">
+                <br>
+                <button type="submit" class="nav-btn" style="background-color: #003366; color: white;">SIGN ME UP</button>
+            </form>
+            <p id="form-status" style="font-weight: bold; color: #003366;"></p>
+        </div>
+
+        <center>
+            <button class="nav-btn" onclick="goBack()" style="background-color: transparent; color: white; border-color: white;">EXIT TO HOME</button>
+        </center>
     </div>
 
     <script src="script.js"></script>
